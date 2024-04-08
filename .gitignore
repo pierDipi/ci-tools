@@ -11,3 +11,7 @@ index.js
 /job-aggregator-working-dir
 # go built binary
 /job-run-aggregator
+
+# default konflux-gen openshift/release clone directory
+/openshift-release
+/konflux-gen/out
