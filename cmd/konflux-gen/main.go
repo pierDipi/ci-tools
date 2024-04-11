@@ -82,6 +82,9 @@ func run() error {
 	if err != nil {
 		return err
 	}
+
+	log.Printf("Found %d configs", len(configs))
+
 	funcs := template.FuncMap{
 		"sanitize": sanitize,
 		"truncate": truncate,

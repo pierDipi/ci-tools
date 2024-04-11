@@ -16,5 +16,11 @@ konflux-gen --openshift-release-path openshift-release --includes "ci-operator/c
 Example command:
 
 ```shell
-go run ./cmd/konflux-gen/main.go --openshift-release-path openshift-release --includes "ci-operator/config/openshift-knative/.*1.13.*.yaml" --output konflux-gen/out --exclude-images ".*source.*"
+go run ./cmd/konflux-gen/main.go --openshift-release-path openshift-release \
+  --application-name "serverless-operator release-1.32" \
+  --includes "ci-operator/config/openshift-knative/.*v1.11.*.yaml" \
+  --includes "ci-operator/config/openshift-knative/serverless-operator/.*1.32.*.yaml" \
+  --exclude-images ".*source.*" \
+  --exclude-images ".*test.*" \
+  --output konflux-gen/out
 ```
